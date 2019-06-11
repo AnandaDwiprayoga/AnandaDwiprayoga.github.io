@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BASKET.ID</title>
+		<link rel="shortcut icon" href="css/images/icon.png">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div id="container">
+			<div id="header">
+				<div class="logo">
+					<li><a href="home.html"><img src="css/images/logo.png"></a></li>
+				</div>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="arena.html">ARENA</a></li>
+					<li><a href="berita.html">BERITA</a></li>
+					<li><a href="cerita.html">CERITA</a></li>
+					<li><a href="liga.html">LIGA</a></li>
+					<li><a href="sneakers&kultur.html">SNEAKERS & KULTUR</a></li>
+					<li><a href="video.html">VIDEO</a></li>
+					<!-- <li><a href="search.html"><img src="css/images/search.png"  style="width: 70%"></a></li> -->
+					<!-- <input type="text" placeholder="Search.."> -->
+					<form>
+						<input class="search" type="text" placeholder="Search..." required>	
+						<input class="button" type="button" value="Search">		
+					  </form>
+			
+				</ul>
+				<div class="login">
+					<ul>
+						<li style="float:right"><a class="active2" href="login.html">LOGIN</a></li>
+						<li style="float:right"><a class="active" href="daftar.html">DAFTAR</a></li>
+
+					</ul>	
+
+				</div>
+			</div>
+		</div>
+
+		<div id="content">
+				<!-- Slideshow container -->
+			<div class="slideshow-container">
+
+				<!-- Full-width images with number and caption text -->
+				<div class="mySlides fade">
+	  				<img src="css/images/slide2.png" style="width:100%">
+				</div>
+  
+				<div class="mySlides fade">
+	  				<img src="css/images/score1.png" style="width:100%">
+				</div>
+  
+				<!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+ 			</div>
+ 			<br>
+  			<script>var slideIndex = 1;
+				showSlides(slideIndex);
+	
+				// Next/previous controls
+				function plusSlides(n) {
+	  				showSlides(slideIndex += n);
+				}
+	
+				// Thumbnail image controls
+				function currentSlide(n) {
+	  				showSlides(slideIndex = n);
+				}
+	
+				function showSlides(n) {
+	  				var i;
+	  				var slides = document.getElementsByClassName("mySlides");
+	  				var dots = document.getElementsByClassName("dot");
+	  				if (n > slides.length) {slideIndex = 1}
+	  				if (n < 1) {slideIndex = slides.length}
+	  				for (i = 0; i < slides.length; i++) {
+		  				slides[i].style.display = "none";
+	  				}
+	  				for (i = 0; i < dots.length; i++) {
+		  				dots[i].className = dots[i].className.replace(" active", "");
+	  				}
+	  				slides[slideIndex-1].style.display = "block";
+	  				dots[slideIndex-1].className += " active";
+				} 
+ 	 		</script>
+          </div>
+                            <div class="about">
+                                <div class="title">BASKET.ID</div>
+																	<div class="isi">
+                                  	SITUS berita olahraga BASKETID.COM merupakan halaman E-Paper majalah BASKET.ID. Berkantor pusat di Surabaya, situs berita ini menyajikan berita-berita seputar olaharaga bola basket.
+                                    BASKET.ID juga mengelola forum diskusi, dan komunitas online melalui Facebook, dan Twitter, serta Google+
+                                    
+                                    Kami menghadirkan BASKET.ID tidak hanya melalui komputer pribadi, tapi juga peranti lain seperti ponsel, BlackBerry, iPhone, iPad dan komputer tablet Android. . 
+                                    
+                                    Dengan adanya situs berita BASKET.ID di harapkan masyarakat Indonesia khususnya dapat memperoleh berita seputar olahraga bola basket dengan mudah dan juga membangun kembali ketertarikan masyarakat dalam olahraga bola basket.
+																	</div>
+														</div>
+														<div class="footer">
+
+															<div class="atas">
+																<div class="kiri">
+																		<div class="margin">
+																				-
+																		</div>
+																	<div class="sosmed">
+																		<li><a href="home.html"><img src="css/images/logo-black.png"  style="width:30%"></a></li>
+																		
+																	</div>
+																	<div class="icon">
+																		<ul>
+																			<li><a href="https://www.line.com"><img src="css/images/line.png"></a></li>
+																			<li><a href="https://www.twitter.com"><img src="css/images/twitter.png"></a></li>
+																			<li><a href="https://www.instagram.com"><img src="css/images/instagram.png"></a></li>
+																			<li><a href="https://www.facebook.com"><img src="css/images/facebook.png"></a></li>
+																		</ul>
+																	</div>
+																	<div class="link-sosmed">
+																			<ul>
+																				<li><a href="https://www.instagram.com">@basket.id</a></li>
+																				<li><a href="https://www.instagram.com">@basket.idstore</a></li>
+																			</ul>
+																	</div>
+																	
+																</div>
+																<div class="kanan">
+																	<div class="alamat">
+																		Office:<br>Jl. Hayam Wuruk No. 60 Surabaya,<br>Jawa Timur<br>0822 3356 3502
+																	</div>
+																</div>
+															</div>
+															
+															<div class="bawah">
+																<div class="copyright">
+																Copyright © 2019 BASKET.ID. All Right Reserved. Any commercial use or distribution without the express written consent <br> of BASKET.ID is strictly prohibited.
+																</div>
+																<div class="about-us">
+																	<ul>
+																		<li><a href="home.html">HOME</a></li>
+																		<li><a href="privacy-policy.html">PRIVACY POLICY</a></li>
+																		<li><a href="top-articles.html">TOP ARTICLES</a></li>
+																		<li><a href="about-us.html">ABOUT US</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</body>
+										
+</html>

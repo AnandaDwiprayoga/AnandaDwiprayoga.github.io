@@ -1,0 +1,262 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-family: times new roman;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+.header {
+	width: 100%;
+	background-color: black;
+	height: 150px;
+	padding-left: 15px;
+}
+
+.navbar li {
+	float: left;
+	padding-top: 10px;
+	margin-right: 25px;
+	list-style-type: none;
+	color: white;
+}
+
+.navbar li#right:before{
+	content: ".";
+	display: inline;
+	clear: left;
+	visibility: hidden;
+}
+.navbar #right{
+	float: right;
+}
+
+.mySlides {
+  display: none;
+}
+
+.navbar li a {
+	text-decoration: none;
+	color: white;
+}
+
+.container{
+	position: relative;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.content {
+	display: flex;
+}
+.kiri {
+	/*background-color: red;*/
+	width: 70%;
+}
+.kanan {
+	/*background-color: blue;*/
+	width: 30%;
+}
+
+.isi1 img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	width: 80%;
+}
+.berita {
+	margin-top: 10px;
+	margin-left: -55px;
+}
+.berita a {
+	color: #0d0128;
+	text-decoration: none;
+}
+
+.berita li {
+	margin-left: 30px;
+	color: orange;
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	border-bottom: 2px solid orange;
+}
+.berita li:hover{
+	background-color: grey;
+}
+.berita .terbaru {
+	width: 100%;
+	background-color: black;
+	color: white;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+}
+
+.isi2, .isi3 {
+	position: relative;
+}
+.isi2 img, .isi3 img {
+	margin-top: 30px;
+	width: 250px;
+}
+
+.isi2 .judul,.isi3 .judul {
+	top: 10px;
+	width: 90%;
+	height: 40px;
+	line-height: 40px;
+	background-color: black;
+	position: absolute;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.isi3 .judul1{
+	top: 10px;
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+	background-color: black;
+	position: absolute;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.isi3 .judul2{
+	top: 10px;
+	width: 330px;
+	height: 40px;
+	line-height: 40px;
+	background-color: black;
+	position: absolute;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.isi2 .judul .more,.isi3 .judul .more{
+	float: right;
+}
+
+
+.isi2 .judul li,.isi3 .judul li, .isi3 .judul1 ,.isi3 .judul2{
+	list-style: none;
+	color: white;
+	float: left;
+}
+
+.berita1 {
+	top: 50px;
+	left: 30px;
+	position: relative;
+	width: 400px;
+	/*background-color: yellow;*/
+	height: 350px;
+}
+
+.berita2 {
+	top: 50px;
+	position: relative;
+	width: 400px;
+	/*background-color: yellow;*/
+	height: 350px;
+}
+
+
+.flex .logo, .flex p {
+	margin-left: 60px;
+	color: black;
+}
+.flex .logo a {
+	text-decoration: none;
+}
+.tanggal, .tanggal1{
+	position: absolute;
+}
+
+table .flex{
+	width: 100%;
+}
+.flex td{
+	width: 50%;
+}
+
+.proteam, .dbl {
+	width: 80%;
+	margin: 0 0 40px 80px;
+}
+.footer {
+		margin-top: 10px;
+}
+
+
+.footer td#left{
+	width: 8%;
+}
+
+.footer td.right{
+	text-align: right;
+    padding-right: 15px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+td .right p {
+	text-align: left;
+	font-weight: bold;
+}
+
+td.right p a {
+	text-decoration: none;
+	color: black;
+	padding : 3px 3px 3px 250px;
+}
+
+td.right p a:hover {
+	background-color: grey;
+}
+.logofooter{
+	width: 250px;
+	display: block;
+	margin-bottom: 10px;
+}
+footer {
+	font-weight: 500;
+	text-align: center;
+	background-color: black;
+	color: white;
+	height: 120px;
+	padding: 30px 50px;
+	box-sizing: border-box;
+}
+footer a{
+	text-decoration: none;
+	margin-top: 10px;
+	color: white;
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BASKET.ID</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link rel="shortcut icon" href="css/images/icon.png">
+	<style>
+		* {padding: 0; margin: 0;}
+		html { font-family: 'Times New Roman', Times, serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+		#container { width: 100%; margin: auto; background: #000;}
+		#header .picture { background: #000; padding: 10px; margin-left: 2%;}
+		.picture a img { width: 35%;}
+		.menu { width: 100%; background: black;}
+		.menu ul{ list-style-type: none; background-color: #000; padding-left: 2%;}
+		.menu ul li {float: left; padding: 5px;}
+		.menu a { display: block; color: white; padding: 15px; text-decoration: none;}
+
+		.burger-icon {display: none;}
+
+		.menu li a:hover { background-color: #3d3d3d;}
+		.active {border-right: 2px solid #fff;}
+		/* untuk menu login */
+		.login {Width: 100%; background: black; margin-top: -47px;}
+		.login ul{list-style-type: none; overflow: hidden; background-color: #000;}
+		.login ul li {float: left;}
+		.login a {display: block; color: white; text-align: center; padding: 15px; text-decoration: none;}
+		.login li a:hover { background-color: #3d3d3d;}
+		.active {border-right: 2px solid #fff;}
+		/* form {widows: 350px; margin: 0;} */
+		.search { padding:8px 15px; background: white; margin-left: 5px;}
+		.button { position:relative; padding:6px 15px; margin-top: 1%; background-color: grey; color:#fafafa;}
+		.button:hover  { background-color:#fafafa; color:#000;}
+
+		::-webkit-input-placeholder { color:  black; font-family:'-apple-system, BlinkMacSystemFont', 'Segoe UI', 'Roboto, Oxygen, Ubuntu, Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif; font-weight:bold;}
+		:-moz-placeholder { color: black; font-family:'-apple-system, BlinkMacSystemFont', 'Segoe UI', 'Roboto, Oxygen, Ubuntu, Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif; font-weight:bold;}
+		::-moz-placeholder { color: black; font-family:'-apple-system, BlinkMacSystemFont', 'Segoe UI', 'Roboto, Oxygen, Ubuntu, Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif; font-weight:bold;}
+
+		.container { position: relative;}
+
+		.prev, .next { cursor: pointer; position: absolute; top: 25%; width: auto; padding: 16px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none;}
+
+		.next { right: 0; border-radius: 3px 0 0 3px;}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8);}
+
+		.content { display: flex;}
+
+		.content .kanan .populer {margin-top: 35px;width: 90%;margin-left: 30px;}
+
+		/*background-color: red;*/
+		.kiri { width: 70%;}
+		
+		a.mobile-icon {display: none;}
+		/*background-color: blue;*/
+		.kanan { width: 30%;}
+		.isi1 img { margin-top: 10px; margin-bottom: 10px; margin-left: 50px; width: 80%;}
+		.berita { margin-top: 10px; margin-left: -55px;}
+		.berita a { color: #0d0128; text-decoration: none;}
+		.berita li { margin-left: 30px; color: orange; font-size: 20px; margin-bottom: 10px; margin-top: 5px; border-bottom: 2px solid orange;}
+		.berita li:hover{ background-color: grey;}
+		.berita .terbaru { width: 100%; background-color: black; color: white; height: 40px; line-height: 40px; padding-left: 15px;}
+
+		.isi2, .isi3 { position: relative;}
+		.isi2 img, .isi3 img { margin-top: 30px; width: 250px;}
+
+		.isi2 .judul,.isi3 .judul { top: 10px; width: 90%; height: 40px; line-height: 40px; background-color: black; position: absolute; padding-left: 20px; padding-right: 20px;}
+
+		.isi3 .judul1{ top: 10px; width: 300px; height: 40px; line-height: 40px; background-color: black; position: absolute; padding-left: 20px; padding-right: 20px;}
+
+		.isi3 .judul2{ top: 10px; width: 330px; height: 40px; line-height: 40px; background-color: black; position: absolute; padding-left: 20px; padding-right: 20px;}
+	
+		.isi2 .judul .more,.isi3 .judul .more{ float: right;}
+
+		.isi2 .judul li,.isi3 .judul li, .isi3 .judul1 ,.isi3 .judul2{ list-style: none; color: white; float: left;}
+
+		/*background-color: yellow;*/
+		.berita1 { top: 50px; left: 30px; position: relative;width: 400px; height: 350px;}
+
+		/*background-color: yellow;*/
+		.berita2 { top: 50px; position: relative; width: 400px; height: 350px;}
+
+		.flex .logo, .flex p { margin-left: 60px; color: black;}
+		.flex .logo a { text-decoration: none;}
+		.tanggal, .tanggal1{ position: absolute;}
+
+		table .flex{ width: 100%;}
+		.flex td{ width: 50%;}
+
+		.proteam, .dbl { width: 80%; margin-bottom: 5px;}
+		.footer {width:100%; margin: auto; clear: left; border-top: 1px solid #000; }
+
+		/* untuk informasi sosial media */
+		.sosmed {padding: 2% 0 2% 5%; float: left;}
+		.sosmed a {text-decoration:none; color:black; font-style:italic;}
+		.sosmed a:hover {text-decoration: underline;}
+
+		/* untuk informasi alamat */
+		.alamat {float:right; font-style: italic; font-size: 18px; text-align: right; margin: 3% 5% 2% 0;}
+		.alamat a {text-decoration:none; color:#000;}
+		.alamat a:hover {text-decoration: underline;}
+	
+		/* untuk footer background hitam */
+		.about-us {text-align: center;}
+		.footer2 {width: 100%; margin: auto; overflow: hidden; background: #000; color: white; font-style: italic;}
+		.copyright{ text-align: center; color: white; padding-top: 20px;}
+		.footer2 ul { list-style-type: none; display: inline-block; padding: 20px;}
+		.footer2 ul li { float: left; margin-bottom: 20px;}
+		.footer2 ul li a { color: white; padding: 5px; text-decoration: none;}
+		.footer2 ul li a:hover { background-color: #3d3d3d;}
+			
+		@media only screen and (max-width: 1161px){
+			.menu {padding-bottom: 20px;text-align: center;}
+			.menu ul li.hidden, .menu .login {display: none;}
+			.score {display: none;}
+			.menu ul .search {width: 700px;border:none; border-radius: 3px;}
+			#header .picture {margin-left: 0;text-align: center;}
+			.picture a img {width: 20%;}
+			a.mobile-icon {position: absolute;top: 5px;left: 20px;font-size: 30px;display: inline-block;}
+			.burger-icon{display: none;}
+			div#mob {background-color: black;opacity:0.9;position: absolute;top: 25px;width: 200px;left: 35px;}
+			.menu .burger-icon ul li {width: 100%;box-sizing: border-box;}
+			.menu .burger-icon ul li a:hover {background-color: orange;} 
+			.content .kanan .populer,.content .kanan .populer .berita {margin-top: 0;}
+		}
+
+		@media only screen and (max-width: 1068px){
+			.content .kanan {display: none;}
+			.content .kiri {width: 100%;}
+			.isi1 img {margin-top: 20px;margin-bottom: 20px;}
+			.content .kiri .isi1 {text-align: center;}
+			.isi2 .judul, .isi3 .judul {margin-top: 0; width:100%;}
+			table.flex {width: 100%;}
+			.isi2 img, .isi3 img {width: 348px;}
+			.flex td {padding-left: 30px;}		
+			.isi3 {margin-top: 20px}
+			.isi3 .judul1 {width: 400px}
+			.isi3 .judul2 {width: 378px;;margin-left: 58px;}
+			.proteam, .dbl {width: 100%;text-align: center;margin-top: 50px;}
+		}
+
+		@media only screen and (max-width: 859px){
+			.menu ul {width: 100%;padding-left: 0}
+			.menu ul .search {width: 70%;}
+			a.mobile-icon {font-size: 24px;}
+			.menu ul li {padding: 0}
+			.menu ul li a {padding: 7px;font-size: 15px;}
+			.flex td {padding-left: 0; }
+			.isi2 img, .isi3 img {width: 300px;}
+			.isi3 .judul1, .isi3 .judul2 {width: 350px;}
+			.sosmed {width: 50%}
+		}
+
+		@media only screen and (max-width: 640px ){
+			.kiri .flex td {width: 100%;display: block;}
+			.kiri .flex td .berita1, .kiri .flex td .berita2{margin: 5px auto;left: 0;width: 600px;}
+			.flex .logo, .flex p {margin-left: 0;text-align: center;}
+			.isi2 img, .isi3 img {width: 376px;}
+			.tanggal, .tanggal1 {position: absolute;left: 50px;}
+			.isi3 .judul2 {width: 90%;top: 397px;margin-left: 0px;}
+			.isi3 .judul1 {width: 90%; margin-top: 10px}
+			.sosmed {width: 25%;padding: 0}
+			.alamat {font-size: 12px}
+			.copyright{font-size: 12px;}
+			.footer2 ul {font-size: 12px;padding: 5px;}
+
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div class="picture">
+				<a href="home.html"><img src="css/images/logo.png"></a>
+			</div>
+		</div>
+		<div class="menu">
+			<ul>
+				<li class="hidden"><a href="arena.html" >ARENA</a></li>
+				<li class="hidden"><a href="berita.html" >BERITA</a></li>
+				<li class="hidden"><a href="cerita.html">CERITA</a></li>
+				<li class="hidden"><a href="liga.html">LIGA</a></li>
+				<li class="hidden"><a href="sneakers&kultur.html">SNEAKERS & KULTUR</a></li>
+				<li class="hidden"><a href="video.html">VIDEO</a></li>
+				<input class="search" type="text" placeholder="Search..." required>	
+				<input class="button" type="button" value="Search">
+			</ul>
+			<div class="burger-icon" id="mob">
+				<ul>
+					<li><a href="arena.html" >ARENA</a></li>
+					<li><a href="berita.html"  >BERITA</a></li>
+					<li><a href="cerita.html" >CERITA</a></li>
+					<li><a href="liga.html" >LIGA</a></li>
+					<li><a href="sneakers&kultur.html"  >SNEAKERS & KULTUR</a></li>
+					<li><a href="video.html" >VIDEO</a></li>
+					<li><a href="login.html" >LOGIN</a></li>
+					<li><a href="daftar.html" >DAFTAR</a></li>
+				</ul>
+			</div>
+			<div class="login">
+				<ul>
+					<li style="float:right"><a class="active2" href="login.html">LOGIN</a></li>
+					<li style="float:right"><a class="active" href="daftar.html">DAFTAR</a></li>
+				</ul>	
+			</div>
+			<a href="#" class="mobile-icon" onclick="slideShow()"> <i class="fa fa-bars"></i></a>
+			<script>
+				function slideShow(){
+					var slide = document.getElementById('mob');
+					if(slide.style.display === "none"){
+						slide.style.display="block";
+					}else{
+						slide.style.display="none";
+					}
+				}
+			</script>
+		</div>
+	</div>
+	<div class="container">
+			<div class="score">
+		<div class="mySlides">
+			<img src="css/images/slide2.png" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<img src="css/images/score1.png" style="width:100%">
+		</div>
+
+		<!-- Next and previous buttons -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<script>var slideIndex = 1;
+				showSlides(slideIndex);
+	
+				// Next/previous controls
+				function plusSlides(n) {
+	  				showSlides(slideIndex += n);
+				}
+	
+				// Thumbnail image controls
+				function currentSlide(n) {
+	  				showSlides(slideIndex = n);
+				}
+	
+				function showSlides(n) {
+	  				var i;
+	  				var slides = document.getElementsByClassName("mySlides");
+	  				var dots = document.getElementsByClassName("dot");
+	  				if (n > slides.length) {slideIndex = 1}
+	  				if (n < 1) {slideIndex = slides.length}
+	  				for (i = 0; i < slides.length; i++) {
+		  				slides[i].style.display = "none";
+	  				}
+	  				for (i = 0; i < dots.length; i++) {
+		  				dots[i].className = dots[i].className.replace(" active", "");
+	  				}
+	  				slides[slideIndex-1].style.display = "block";
+	  				dots[slideIndex-1].className += "active";
+				} 
+ 	 		</script>
+	</div>	
+	</div>
+	<div class="content">
+		<div class="kiri">	
+			<div class="isi1">
+				<a href="bogut.html"><img src="css/images/Andrew_Bogut.png"></a>
+			</div>
+			<div class="isi2">
+				<div class="judul">
+					<ul>
+						<li>BERITA</li>
+						<li class="more">MUAT LEBIH</li>
+					</ul>
+				</div>
+				<table class="flex">
+					<tr>
+						<td>
+							<div class="berita1">
+							<div class="tanggal"><img src="css/images/tanggal.png" alt=""  style="width: 40px;"></div>
+							<div class="logo"><a href="mccollum.html"><img src="css/images/filipina.jpg"></a></div>
+							<p>Yeng Guiao Targetkan <br> Lolos Babak Kedua Piala<br>Dunia FIBA 2019</p>
+							</div>
+						</td>
+						<td>
+							<div class="berita2">
+							<div class="tanggal1"><img src="css/images/tanggal1.png" style="width: 40px;"></div>
+							<div class="logo"><a href="mccollum.html"><img src="css/images/mccolum.jpg"></a></div>
+							<p>MRI Positif, C.J. McCollum Menepiah</p>
+						</div>	
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="isi3">
+				<div class="judul">
+					<ul>
+						<li>CERITA</li>
+						<li class="more">MUAT LEBIH</li>
+					</ul>
+				</div>
+				<table class="flex">
+					<tr>
+						<td>
+							<div class="berita1">
+							<div class="tanggal"><img src="css/images/tanggal.png" alt=""  style="width: 40px;"></div>
+							<div class="logo"><a href="mccollum.html"><img src="css/images/ceo.jpg"></a></div>
+							<p>Pendapat CEO ADIDAS<br>tentang Tragedi Sepatu<br>Zion Williamson</p>
+							</div>
+						</td>
+						<td>
+							<div class="berita2">
+							<div class="tanggal1"><img src="css/images/tanggal1.png" alt="" 		style="width: 40px;"></div>
+							<div class="logo"><a href="mccollum.html"><img src="css/images/stapac.JPG"></a></div>
+							<p>Kaleb Ramot Gemilang,<br>Pemain Paling Berharga<br>IBL 2018-2019</p>
+						</div>	
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="isi3">
+				<table class="flex">
+					<tr>
+						<td>
+							<div class="judul1">SNEAKER&KULTUR</div>
+							<div class="berita1">
+							<div class="tanggal"><img src="css/images/tanggal.png" alt=""  style="width: 40px;"></div>
+							<div class="logo"><a href="mccollum.html"><img src="css/images/sepatu.jpeg"></a></div>
+							<p>Candace Parker Kenalkan <br>Sepatu Adidas Bertema<br>Captain Marvel</p>
+							</div>
+						</td>
+						<td>
+							<div class="judul2">VIDEO</div>
+							<div class="berita2">
+							<div class="tanggal1"><img src="css/images/tanggal1.png" alt="" 		style="width: 40px;"></div>
+							<div class="logo"><a href="mccollum.html"><img src="css/images/davis.jpg"></a></div>
+							<p>Dobel-dobel Monster <br>Davis Antar Pelicans<br>Ungguli Clippers</p>
+						</div>	
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="kanan">
+			<div class="isi1">
+				<div class="berita">
+					<div class="terbaru">TERBARU</div>
+					<ul>
+						<li><a href="terbaru1.html">Andrew Bogut Segera Debut dengan Golden State Warriors</a></li>
+						<li><a href="terbaru2.html">Rekor-Rekor di Pertandingan Philadelphia 76ers Versus<br>Milwaukee Bucks</a></li>
+						<li><a href="terbaru3.html">Candace Parker Kenalkan Sepatu Adidas Bertema Captain Marvel</a></li>
+						<li><a href="terbaru4.html">Milwaukee Bucks Tanpa Malcolm Brogdon Setidaknya <br> Minggu ke Depan</a></li>
+						<li><a href="terbaru5.html">Kyle Korver Berpikir untuk Pensiun di Akhir Musim</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sponsor">
+				<a href="iklan.html"><img src="css/images/manila.png" style="margin-top: 6px;height: 350px;"></a>
+			</div>
+			<div class="populer">
+				<div class="berita">
+					<div class="terbaru">POPULER</div>
+					<ul>
+						<li><a href="populer1.html">Russell Westbrook Terancam Sanksi Akibat 16 Technical Foul</a></li>
+						<li><a href="populer2.html">LeBron James Gagal Selamatkan Lakers dari New York Knicks</a></li>
+						<li><a href="populer.html">Potensi Dirk Nowitzki Geser Wilt dalam Daftar Pencetak Angka</a></li>
+						<li><a href="populer4.html">Devin Booker Pecahkan Rekor Charles Barkley</a></li>
+						<li><a href="populer5.html">Kevin Durant Tak Terhentikan, Warriors Hadapi Rockets di Semifinal</a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class="proteam">
+		<a href="https://www.proteam.co.id"><img src="css/images/iklan.jpg" style="width: 70%"></a>
+	</div>
+	<div class="footer">
+		<div class="sosmed">
+			<a href="home.html"><img src="css/images/logo-black.png" style="width:70%;"></a><br>
+			<a href="https://www.line.com"><img src="css/images/line.png"></a>
+			<a href="https://www.twitter.com"><img src="css/images/twitter.png"></a>
+			<a href="https://www.instagram.com"><img src="css/images/instagram.png"></a>
+			<a href="https://www.facebook.com"><img src="css/images/facebook.png"></a><br>
+			<a href="">@basket.id</a>
+			<a href="">@basket.idstore</a>
+		</div>
+		<div class="alamat">
+			Office:<br>
+			<a href="https://goo.gl/maps/rXEkccjz3zRWhtq19"><i class="fa fa-map-marker"></i> Jl. Hayam Wuruk No. 60 Surabaya,<br>Jawa Timur</a><br>
+			<a href="https://whatsapp.com"><i class="fa fa-whatsapp"></i>&nbsp0822 3356 3502</a>
+		</div>
+
+		<!-- untuk footer background hitam -->
+		<div class="footer2">
+			<div class="copyright">
+			Copyright © 2019 BASKET.ID. All Right Reserved. Any commercial use or distribution without the express written consent <br> of BASKET.ID is strictly prohibited.
+			</div>
+			<div class="about-us">
+				<ul>
+					<li><a class="active" href="home.html">HOME</a></li>
+					<li><a class="active" href="privacy-policy.html">PRIVACY POLICY</a></li>
+					<li><a class="active" href="top-articles.html">TOP ARTICLES</a></li>
+					<li><a href="about.html">ABOUT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
