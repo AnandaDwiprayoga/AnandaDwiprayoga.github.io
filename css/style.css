@@ -1,0 +1,768 @@
+html {
+	font-family: 'roboto', sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	font: 16px28px;
+	background: white;
+}
+#container {
+	/*width: 1366px;*/
+	width :100%;
+	margin: auto;
+	background: #000;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-/*width: 1366px;*/
+  width :100%;
+  position: relative;
+  margin: auto;
+  padding-top: 15px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+/* .fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+  } */
+  
+  @-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+  
+  @keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+
+  
+
+
+#header .logo {
+	padding-top: 35px;
+	padding-left: 30px;
+	padding-bottom: 0;
+}
+.menu {
+	/*width: 1366px;*/
+	width :100%;
+	background: black;
+	font-size: 20px;
+}
+.menu ul{
+	list-style-type: none;
+	overflow: hidden;	
+	background-color: #000;
+	padding-bottom: 10px;
+}
+.menu ul li {
+	float: left;
+}
+.menu a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+}
+.menu li a:hover {
+	background-color: #3d3d3d;
+}
+.active {
+	border-right: 2px solid #fff;
+}
+
+.login {
+	/*width: 1366px;*/
+	width :100%;
+	background: black;
+	font-size: 20px;
+	margin-top: -70px;
+}
+.login ul{
+	list-style-type: none;
+	overflow: hidden;	
+	background-color: #000;
+	padding-bottom: 10px;
+}
+.login ul li {
+	float: left;
+}
+.login a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+}
+.login li a:hover {
+	background-color: #3d3d3d;
+}
+.active {
+	border-right: 2px solid #fff;
+}
+
+/* .menu input[type=text] {
+		padding: 6px;
+		border: none;
+		margin-top: 13px;
+		margin-right: 16px;
+		font-size: 17px;
+} */
+form {
+	widows: 350px;
+	/* margin:50px auto; */
+	padding-top: 10px;
+}
+.search {
+	padding:8px 15px;
+	background: white;
+	/* border:0px solid wrgb(255, 255, 255); */
+}
+.button {
+	position:relative;
+	padding:6px 15px;
+	left:8px;
+	/* border:2px solid white; */
+	background-color: grey;
+	color:#fafafa;
+}
+.button:hover  {
+	background-color:#fafafa;
+	color:#000;
+}
+		  
+::-webkit-input-placeholder { /* For WebKit browsers */
+	color:  black;
+				font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				font-weight:bold;
+}
+:-moz-placeholder { /* For Mozilla Firefox 4 to 18 */
+	color:   black;
+				font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				font-weight:bold;
+}
+::-moz-placeholder { /* For Mozilla Firefox 19+ */
+	color:    black;
+				font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				font-weight:bold;
+}	
+
+#content {
+	/*width: 1366px;*/
+	width :100%;
+	margin: auto;
+	margin-top: -20px;
+}
+.gambar {
+	background: #fff;
+	width: 100%;
+	margin: auto;
+}
+.berita {
+	/*width: 1366px;*/
+	width :100%;
+	margin: auto;
+	/* height: 2500px; */
+}
+.tengah {
+	width: 966px;
+	height: 2000px;
+}
+
+.tengah .kiri-1{
+	float: left;
+padding-top: 500px;
+}
+.tengah .left {
+	width: 900px;
+	float: left;
+	padding-left: 10px;
+	list-style-type: none;
+}
+.tanggal{
+	float: left;
+	padding-top: 100px;
+	padding-left: 30px;
+}
+.tanggal-1{
+	padding-top: 100px;
+	padding-left: 500px;
+}
+
+.filipina{
+	overflow: hidden;
+	padding-left: 20px;
+	margin-top:-75px;
+	list-style: none;
+
+}
+.filipina1 {
+	font-size: 25px;
+	padding-left: 95px;
+	margin-top: 15px;
+}
+.filipina1 ul{
+	list-style-type: none;
+	overflow: hidden;	
+}
+.filipina1 ul li {
+	float: left;
+}
+.filipina1 a {
+	display: block;
+	color:black;
+	text-align: left;
+	padding: 5px;
+	text-decoration: none;
+}
+.filipina1 li a:hover {
+	text-decoration: underline;
+}
+/* .kategori .kategori-1{
+	font-weight: bold;
+	font-size: 15px;
+	padding-left: 100px;
+	margin-top: -35px;
+	width: 10px;
+	margin-left: 50px;
+}
+.kategori .kategori-2{
+	font-weight: bold;
+	font-size: 15px;
+	padding-left: 570px;
+	margin-top: -35px;
+} */
+
+.jam-1{
+	font-weight: bold;
+	font-size: 10px;
+	padding-left: 100px;
+	padding-top: 15px;
+}
+.jam-2{
+	font-weight: bold;
+	font-size: 10px;
+	padding-left: 570px;
+	padding-top: -30px;
+}
+.mccollum{
+	margin-top: -310px;
+	padding-left: 570px;
+	list-style: none;
+}
+
+.mccollum1 {
+	font-size: 25px;
+	padding-left: 565px;
+	padding-top: 15px;
+	padding-bottom: -10px;
+}
+.mccollum1 ul{
+	list-style-type: disc;
+	overflow: hidden;	
+}
+.mccollum1 ul li {
+	float: left;
+}
+.mccollum1 a {
+	display: block;
+	color:black;
+	text-align: left;
+	padding: 5px;
+	text-decoration: none;
+}
+.mccollum1 li a:hover {
+	text-decoration: underline;
+}
+
+.tanggal-2{
+	float: left;
+	margin-top: -910px;
+position: relative;
+left: -50px;
+	/*margin-right: -100px;*/
+}
+.tanggal-3{
+	position: relative;
+	left: -420px;
+	margin-top: -910px;
+	/*margin-left: -100px;*/
+}
+
+
+.adidas{
+	overflow: hidden;
+	margin-top:20px;
+	list-style: none;
+	float: left;
+	margin-left: -814px;
+	margin-top: -73px;
+}
+.adidas img {
+	width: 300px;
+}
+
+.adidas:after {
+	content: '.';
+	display: block;
+	visibility: hidden;
+}
+.adidas1 {
+	font-size: 25px;
+	padding-left: 0px;
+	margin-top:15px;
+}
+.adidas1 ul{
+	list-style-type: none;
+	overflow: hidden;	
+}
+.adidas1 ul li {
+	float: left;
+}
+.adidas1 a {
+	display: block;
+	color:black;
+	text-align: left;
+	padding-left: 20px;
+	text-decoration: none;
+}
+.adidas1 li a:hover {
+	text-decoration: underline;
+}
+.stapac{
+	list-style: none;
+	position: absolute;
+	top: 1430px;
+	right: 380px;
+}
+
+.stapac1 {
+	font-size: 25px;
+	/*margin-left: 580px;*/
+	padding-top: 15px;
+	padding-bottom: -10px;
+}
+.stapac1 ul{
+	list-style-type: disc;
+	overflow: hidden;	
+}
+.stapac1 ul li {
+	float: left;
+}
+.stapac1 a {
+	display: block;
+	color:black;
+	text-align: left;
+	padding-left: px;
+	text-decoration: none;
+}
+.stapac1 li a:hover {
+	text-decoration: underline;
+}
+.sepatu {
+	margin-top: 0px;
+	padding-left: 120px;
+}
+.sepatu1 {
+	font-size: 25px;
+	padding-top: 15px;
+	padding-left: 120px;
+}
+.sepatu1 ul {
+	overflow: hidden;
+}
+.sepatu1 ul li {
+	float: left;
+}
+.sepatu1 a {
+	text-decoration: none;
+	color: #000;
+}
+.sepatu1 li a:hover {
+	text-decoration: underline;
+}
+.davis {
+	padding-left: 590px;
+	margin-top: -300px;
+}
+.davis1 {
+	font-size: 25px;
+	padding-top: 15px;
+	padding-left: 590px;
+}
+.davis1 a {
+	text-decoration: none;
+	color: #000;
+}
+.davis1 a:hover {
+	text-decoration: underline;
+}
+.proteam {
+	padding-left: 20px;
+	padding-top: 100px;
+	padding-bottom: 20px;
+
+}
+
+.dbl{
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+.berita1{
+	color: rgb(255, 255, 255);
+	background-color: black;
+	font-size: 20px;
+	float: left;
+	padding: 10px 850px 10px 10px ;
+	margin-left: -900px;
+	margin-top: 550px;
+}
+
+.cerita{
+	color: rgb(255, 255, 255);
+	background-color: black;
+	font-size: 20px;
+	float: left;
+	padding: 10px 850px 10px 10px ;
+	margin-left: -930px;
+	margin-top: 1022px;
+}
+
+.sneakers{
+	color: rgb(255, 255, 255);
+	background-color: black;
+	font-size: 20px;
+	float: left;
+	padding: 10px 250px 10px 10px ;
+	margin-left: -930px;
+	margin-top: 1500px;
+}
+.video{
+	color: rgb(255, 255, 255);
+	background-color: black;
+	font-size: 20px;
+	float: left;
+	padding: 10px 360px 10px 10px ;
+	margin-left: -430px;
+	margin-top: 1500px;
+}
+
+.tanggal-4{
+	float: left;
+	margin-top: 650px;
+	margin-left: 40px;
+}
+.tanggal-5{
+	padding-top: 0px;
+	margin-left: 510px;
+}
+
+.utama {
+	float: left;
+	width: 900px;
+}
+.utama img {
+	width: 900px;
+}
+
+.sidebar{
+	position: absolute;
+	float: right;
+	width: 300px;
+	/* height: 2000px; */
+	margin-top: -1640px;
+	/*margin-right: -500px;*/
+	margin-left: 940px;
+}
+
+.right {
+	float: right;
+	width: 300px;
+	margin-top: -1000px;
+	/* background: #000; */
+}
+.right #info {
+	color: rgb(255, 255, 255);
+	background-color: black;
+	font-size: 20px;
+	padding: 10px;
+
+}
+.terbaru {
+	font-size: 20px;
+}
+.terbaru ul{
+	list-style-type: none;
+	/* overflow: hidden; */
+	padding-bottom: 10px;
+	
+
+}
+.terbaru ul li {
+	float: left;
+
+}
+.terbaru a {
+	display: block;
+	color: black;
+	text-align: left;
+	padding: 20px;
+	text-decoration: none;
+	border-bottom: 3px solid orange;
+	
+
+}
+.terbaru li a:hover {
+	/* text-decoration-line: underline; */
+	background-color: #a5a5a5a5;
+	color: #000;
+	width: 300px;
+	border-bottom: 3px solid orange;
+}
+
+
+.iklan{
+	float: right;
+	padding-right: 100px;
+	margin-left: 20px;
+	padding-top: 30px;
+	overflow: hidden;
+	padding-bottom: 18px;
+	list-style-type: none;
+}
+
+.right #info1{
+	color: rgb(255, 255, 255);
+	width: 300px;
+	background-color: black;
+	font-size: 20px;
+	float: left;
+	padding: 10px 300px 10px 10px ;
+	margin-top: 4px;
+}
+
+.populer {
+	font-size: 20px;
+	border-bottom: 3px;
+	border-bottom-color: orange;
+}
+.populer ul{
+	list-style-type: none;
+	/* overflow: hidden; */
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.populer ul li {
+	float: left;
+}
+.populer a {
+	display: block;
+	color: black;
+	text-align: left;
+	padding: 20px;
+	text-decoration: none;
+	border-bottom: 3px solid orange;
+}
+.populer li a:hover {
+	background-color: #a5a5a5a5;
+	color: #000;
+	width: 300px;
+	border-bottom: 3px solid orange;
+}
+
+
+.footer {
+	background: white;
+	/*width: 1366px;*/
+	width :100%;
+	height: 250px;
+	margin: auto;
+}
+.atas {
+	/*width: 1366px;*/
+	width :100%;
+	height: 150px;
+}
+.kiri {
+	width: 683px;
+	float: left;
+	font-size: 50px;
+}
+.kiri .margin{
+	background: #000;
+	color: #000;
+	font-size: 2px;
+	margin-bottom: 10px;
+	/*width: 1366px;*/
+	width :100%;
+}
+.kiri .sosmed {
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+	padding-left: 30px;
+	text-decoration: none;
+}
+.sosmed{
+	overflow: hidden;
+	list-style: none;
+}
+
+
+.kiri .icon{
+	float: left;
+	padding: 5px;
+	margin-top: 5px;
+	margin-left: 25px;
+
+}
+.icon ul{
+	list-style-type: none;
+	overflow: hidden;
+	text-align: center;
+	
+}
+.icon ul li {
+	float: left;
+}
+.icon a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	text-decoration: none;
+}
+
+
+.link-sosmed{
+	font-family: bebas;
+	font-size: 20px;
+	font-style: oblique;
+	color: #000;
+	float: left;
+}
+.link-sosmed ul{
+	list-style-type: none;
+	overflow: hidden;
+	text-align: center;
+	margin-left: -130px;
+	padding-bottom: 0;
+	margin-top:0px;
+	/* padding-left: -40px; */
+}
+.link-sosmed ul li {
+	float: left;
+	color: black;
+	text-align: left;
+	/* padding: 5px; */
+	/* padding-left: 5px; */
+	text-decoration: none;
+margin-top: 0px;
+}
+.link-sosmed a {
+	/* display: block; */
+	color: black;
+	text-align: left;
+	padding: 5px;
+	/* margin-top: 35px; */
+	padding-left: 5px;
+	text-decoration: none;
+}
+
+.kanan {
+	width: 683px;
+	float: right;
+	text-align: right;
+}
+.kanan .alamat {
+	color: #000;
+	float: right;
+	font-size: 25px;
+	font-style: italic;
+	padding: 5px;
+	padding-top: 25px;
+	padding-right: 30px;
+}
+.bawah {
+	/*width: 1366px;*/
+	width :100%;
+	height: 100px;
+	background: #000;
+
+}
+.copyright{
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 20px;
+	position: relative;
+	font-style: italic;
+	
+}
+
+.about-us{
+	font-size: 15px;
+	text-align: center;
+	font-style: italic;
+	padding-left: 480px;
+	margin-top: 10px;
+}
+.about-us ul{
+	list-style-type: none;
+	overflow: hidden;
+	text-align: center;
+}
+.about-us ul li {
+	float: left;
+}
+.about-us a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	text-decoration: none;
+}
+.about-us li a:hover {
+	background-color: #3d3d3d;
+}
