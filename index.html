@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>BASKET.ID</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<link rel="shortcut icon" href="css/images/icon.png">
 	<style>
-		* {padding: 0; margin: 0;}
+		* {padding: 0; margin: 0;box-sizing: border-box;}
+		div#header {width: 100%;}
 		html { font-family: 'Times New Roman', Times, serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
 		#container { width: 100%; margin: auto; background: #000;}
 		#header .picture { background: #000; padding: 10px; margin-left: 2%;}
 		.picture a img { width: 35%;}
 		.menu { width: 100%; background: black;}
-		.menu ul{ list-style-type: none; background-color: #000; padding-left: 2%;}
+		.menu ul{ list-style-type: none; background: #000; padding-left: 2%;}
 		.menu ul li {float: left; padding: 5px;}
 		.menu a { display: block; color: white; padding: 15px; text-decoration: none;}
 
@@ -65,7 +67,7 @@
 
 		.isi2, .isi3 { position: relative;}
 		.isi2 img, .isi3 img { margin-top: 30px; width: 250px;}
-
+		.tanggal img,.tanggal1 img {width: 40px}
 		.isi2 .judul,.isi3 .judul { top: 10px; width: 90%; height: 40px; line-height: 40px; background-color: black; position: absolute; padding-left: 20px; padding-right: 20px;}
 
 		.isi3 .judul1{ top: 10px; width: 300px; height: 40px; line-height: 40px; background-color: black; position: absolute; padding-left: 20px; padding-right: 20px;}
@@ -81,6 +83,9 @@
 
 		/*background-color: yellow;*/
 		.berita2 { top: 50px; position: relative; width: 400px; height: 350px;}
+
+		.frame-isi4 {position: relative;}
+		#isi4 .tanggal,#isi4 .tanggal1 {top: 0;position: absolute;left: 0}
 
 		.flex .logo, .flex p { margin-left: 60px; color: black;}
 		.flex .logo a { text-decoration: none;}
@@ -134,7 +139,7 @@
 			.isi2 .judul, .isi3 .judul {margin-top: 0; width:100%; box-sizing: border-box;}
 			table.flex {width: 100%;}
 			.isi2 img, .isi3 img {width: 348px;}
-			/*.flex td {padding-left: 30px;}		*/
+			.flex td {padding-left: 30px;}		
 			.isi3 {margin-top: 20px}
 			.isi3 .judul1 {width: 400px;}
 			.isi3 .judul2 {width: 389px;margin-left: 58px;}
@@ -155,18 +160,52 @@
 		}
 
 		@media only screen and (max-width: 783px ){
-			.kiri .flex td {width: 100%;display: block;}
-			.kiri .flex td .berita1, .kiri .flex td .berita2{margin: 5px auto;left: 0;width: 600px;}
+			table.flex {padding: 2%;}
+			.content .kiri .isi1 {width: 100%;padding: 5%;}
+			.isi1 img {width: 90%;padding: 0;margin: 0;}
+			tr {width: 100%;}
+			.isi2, .isi3 {width: 100%;margin-top: 0}
+			.kiri .flex td {width: 50%;display: inline-block;position: static;}
+			.isi2 .judul, .isi3 .judul {position: static;}
+			.berita1, .berita2 {position: static;width: 100%;height: 245px;;padding: 0 5%;}
+			.kiri div#isi4 .flex td {width: 100%;display: block;position: static;height: 493px;} 
+			#isi4 .berita1,#isi4 .berita2 {height: auto; padding-top: 10%;}
+			#isi4 .judul1 {width: 100%;position: static; margin-top: 0px; }
 			.flex .logo, .flex p {margin-left: 0;text-align: center;}
-			.isi2 img, .isi3 img {width: 376px;}
-			.tanggal, .tanggal1 {position: absolute;left: 50px;}
+			.isi2 img, .isi3 img {width: 100%;margin: 0;padding: 0;}
+			.tanggal, .tanggal1 {position: absolute;width: 5%;}
 			.isi3 .judul2 {width: 100%;top: 397px;margin-left: 0px;}
-			.isi3 .judul1 {width: 100%; margin-top: 10px}
+			.isi3 .judul1 {width: 100%; margin-top: 0px}
+			#isi4 .judul1, #isi4 .judul2 {position: static;}
 			.sosmed {width: 25%;padding: 0}
 			.alamat {font-size: 12px}
 			.copyright{font-size: 12px;}
 			.footer2 ul {font-size: 12px;padding: 5px;}
+		}
 
+		@media only screen and (max-width: 480px){
+			.berita1, .berita2 {height: 192px;}
+			#isi4 .berita1, #isi4 .berita2 {padding-top: 16%;}
+			.kiri div#isi4 .flex td {width: 100%;display: block;position: static;height: 331px;}
+			.proteam, .dbl{margin-top: 0}
+		}
+
+		@media only screen and (max-width: 641px){
+			#container {background: blue;} 
+			#header .picture {background: blue;}
+			.menu ul {background: blue;}
+			.menu {background: blue;}
+		}
+
+		
+		@media only screen and (max-width: 361px){
+			body {
+				background: yellow;
+			}
+			#container {background: black;} 
+			#header .picture {background: black;}
+			.menu ul {background: black;}
+			.menu {background: black;}
 		}
 	</style>
 </head>
@@ -279,14 +318,14 @@
 					<tr>
 						<td>
 							<div class="berita1">
-							<div class="tanggal"><img src="css/images/tanggal.png" alt=""  style="width: 40px;"></div>
+							<div class="tanggal"><img src="css/images/tanggal.png" alt=""  ></div>
 							<div class="logo"><a href="mccollum.html"><img src="css/images/filipina.jpg"></a></div>
 							<p>Yeng Guiao Targetkan <br> Lolos Babak Kedua Piala<br>Dunia FIBA 2019</p>
 							</div>
 						</td>
 						<td>
 							<div class="berita2">
-							<div class="tanggal1"><img src="css/images/tanggal1.png" style="width: 40px;"></div>
+							<div class="tanggal1"><img src="css/images/tanggal1.png" ></div>
 							<div class="logo"><a href="mccollum.html"><img src="css/images/mccolum.jpg"></a></div>
 							<p>MRI Positif, C.J. McCollum Menepiah</p>
 						</div>	
@@ -305,14 +344,14 @@
 					<tr>
 						<td>
 							<div class="berita1">
-							<div class="tanggal"><img src="css/images/tanggal.png" alt=""  style="width: 40px;"></div>
+							<div class="tanggal"><img src="css/images/tanggal.png" alt=""  ></div>
 							<div class="logo"><a href="mccollum.html"><img src="css/images/ceo.jpg"></a></div>
 							<p>Pendapat CEO ADIDAS<br>tentang Tragedi Sepatu<br>Zion Williamson</p>
 							</div>
 						</td>
 						<td>
 							<div class="berita2">
-							<div class="tanggal1"><img src="css/images/tanggal1.png" alt="" 		style="width: 40px;"></div>
+							<div class="tanggal1"><img src="css/images/tanggal1.png" alt="" 		></div>
 							<div class="logo"><a href="mccollum.html"><img src="css/images/stapac.JPG"></a></div>
 							<p>Kaleb Ramot Gemilang,<br>Pemain Paling Berharga<br>IBL 2018-2019</p>
 						</div>	
@@ -320,22 +359,26 @@
 					</tr>
 				</table>
 			</div>
-			<div class="isi3">
+			<div class="isi3" id="isi4">
 				<table class="flex">
 					<tr>
 						<td>
 							<div class="judul1">SNEAKER&KULTUR</div>
 							<div class="berita1">
-							<div class="tanggal"><img src="css/images/tanggal.png" alt=""  style="width: 40px;"></div>
-							<div class="logo"><a href="mccollum.html"><img src="css/images/sepatu.jpeg"></a></div>
+							<div class="frame-isi4">
+								<div class="tanggal"><img src="css/images/tanggal.png" alt=""  ></div>
+								<div class="logo"><a href="mccollum.html"><img src="css/images/sepatu.jpeg"></a></div>
+							</div>
 							<p>Candace Parker Kenalkan <br>Sepatu Adidas Bertema<br>Captain Marvel</p>
 							</div>
 						</td>
 						<td>
 							<div class="judul2">VIDEO</div>
 							<div class="berita2">
-							<div class="tanggal1"><img src="css/images/tanggal1.png" alt="" 		style="width: 40px;"></div>
-							<div class="logo"><a href="mccollum.html"><img src="css/images/davis.jpg"></a></div>
+							<div class="frame-isi4">
+								<div class="tanggal1"><img src="css/images/tanggal1.png" alt="" 		></div>
+								<div class="logo"><a href="mccollum.html"><img src="css/images/davis.jpg"></a></div>
+							</div>
 							<p>Dobel-dobel Monster <br>Davis Antar Pelicans<br>Ungguli Clippers</p>
 						</div>	
 						</td>
